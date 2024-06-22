@@ -1,0 +1,365 @@
+/* HEADER */
+
+ul {
+    position: absolute;
+    padding-left: 180px;
+    padding-top: 15px;
+}
+
+li {
+    float: left;
+    list-style-type: none;
+    padding-top: 40px;
+}
+
+.nav{
+    display: block;
+    color: #B05F00;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    width: 190px;
+    height: 36px;
+    padding-top: 18px;
+    margin-left: 120px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #B05F00;
+    border-radius: 15px;
+}
+
+.nav a:hover {
+    background-color: #FFA07A;
+    color: white;
+    border: white 3px solid;
+}
+
+#open-modal-btn { 
+    position: relative;
+    margin: 32px;
+    display: block;
+    color: #B05F00;
+    text-align: center;
+    font-weight: 100;
+    font-size: 13px;
+    width: 190px;
+    height: 55px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #B05F00;
+    border-radius: 15px;
+}
+
+#open-modal-btn:hover{
+    background-color: #FFA07A;
+    color: white;
+    border: white 3px solid;
+}
+
+#header {
+    background-color: #FFA07A;
+    width: 100vw;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.main{
+    position: relative;
+    top: 150px;
+}
+
+.logo {
+    height: 80px;
+    padding-left: 50px;
+    padding-top: 20px;
+    height: 120px;
+    position: absolute;
+}
+
+.information {
+    font-size: 16px;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    text-align: right;
+    color: black;
+    font-weight: bolder;
+}
+
+/* BODY */
+
+body {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-size: 26px;
+    position: absolute;
+    padding-left: 200px;
+    padding-top: 15px;
+    font-weight: bolder;
+}
+
+/* MODAL WINDOW */
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal_box{
+    position: relative;
+    max-width: 1500px;
+    padding: 45px;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, .2);
+    transform: scale(0);
+    transition: transform .8s;
+}
+
+.modal_close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal_box{
+    transform: scale(1);
+}
+
+/* INSIDE MODAL WINDOW*/
+
+/*RADIO BUTTON*/
+
+.regularContribution {
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    width: 650px;
+    height: 24px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #FFA07A;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+.onceContribution{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    width: 650px;
+    height: 24px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-right: 90px;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #FFA07A;
+    color: white;
+    border: #FFA07A 1px solid;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+.labelPrice{
+    font-size: 20px;    
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    margin-top: 70px;
+}
+
+.category label {
+    position: relative;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+    font-weight: 700;
+    font-size: 18px;
+    width: 200px;
+    height: 24px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-right: 70px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #FFA07A;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+}
+
+.modal .form1 input {
+    display: none;
+}
+
+#p100:checked ~ .category .p100Method,
+#p200:checked ~ .category .p200Method,
+#p300:checked ~ .category .p300Method,
+#p400:checked ~ .category .p400Method,
+#p500:checked ~ .category .p500Method{
+    background-color: #FFA07A;
+    color: white;
+    border: #FFA07A 3px solid;
+}
+
+/*FIELD*/
+
+/* Contibute button */
+
+.submit-btn{
+    position: absolute;
+    right: 64px;
+    bottom: 15px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #FFA07A;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #FFA07A;
+    color: white;
+    border: #FFA07A 3px solid;
+}
+
+/* Another price */
+
+.form_group{
+    position: relative;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.form_input{
+    color: black;
+    font-size: large;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+.form_label{
+    position: absolute;
+    top: 14px;
+    left: 700px;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+.form_input{
+    width: 100%;
+    border: #FFA07A 1px solid;
+    border-radius: 15px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    color:black;
+    font-family: 'Montserrat';
+    font-weight: bolder;    
+}
+
+.form_input:focus ~ .form_label, 
+.form_input:not(:placeholder-shown) ~ .form_label{
+    top: -18px;
+    font-size: 12px;
+}
+
+/* Enter email, name, surname, response*/
+
+.data_input{
+    color: black;
+    font-size: large;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .2);
+}
+
+.data_label{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+.data_input{
+    width: 100%;
+    border: rgba(220, 220, 220, 0.767) 1px solid;
+    border-radius: 15px;
+    height: 50px;
+    background-color: rgba(220, 220, 220, 0.767);
+    outline: none;
+    transition: 0.3s;
+    color:black;
+    font-family: 'Montserrat';
+    font-weight: bolder;    
+}
+
+.data_input:focus ~ .data_label, 
+.data_input:not(:placeholder-shown) ~ .data_label{
+    top: -18px;
+    font-size: 12px;
+}
+
+/* Check-box */
+
+.checkb{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 16px;
+}

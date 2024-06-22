@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная страница</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="header">
+            <h1>Приют "Лапки"</h1>
+            <img class="logo" src="logo.png">
+            <p class="information">телефон: +7 917 827-15-45<br />адрес: г. Санкт-Петербург, ул. Гагарина 56 к5</p>
+            <ul>
+                <li><a class="nav" href="#home">Главная</a></li>
+                <li><a class="nav" href="#pets">Наши питомцы</a></li>
+                <li><a class="nav" href="#help">Помощь приюту</a></li>
+                <li><a class="nav" href="#aboutUs">О нас</a></li>
+                <li><a class="nav" href="#aboutUs">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <button id = "open-modal-btn">Пожертвовать</button>
+        </div>
+
+        <div class="modal" id="my-modal">
+            <div class="modal_box">
+                <button class="modal_close-btn" id="close-my-modal-btn">
+                    <img width="23" height="25" viewBox="0 0 23 25" fill="none" src="icons8-отмена.svg"></img>
+                </button>
+                
+            <li class="regularContribution"><a class="btn">Регулярные пожертвования</a></li>
+            <li class="onceContribution"><a class="btn">Разовое пожертвование</a></li>
+                <p class="labelPrice">Размер выплаты</p>
+                
+                <form action='file.php' method='POST'>
+                    <div class="form1">
+                        <input type="radio" name="price" id="p100">
+                        <input type="radio" name="price" id="p200">
+                        <input type="radio" name="price" id="p300">
+                        <input type="radio" name="price" id="p400">
+                        <input type="radio" name="price" id="p500">
+
+                        <div class="category">
+                            <label for="p100" class="p100Method">100 рублей</label>
+                            <label for="p200" class="p200Method">200 рублей</label>
+                            <label for="p300" class="p300Method">300 рублей</label>
+                            <label for="p400" class="p400Method">400 рублей</label>
+                            <label for="p500" class="p500Method">500 рублей</label>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <input class="form_input" placeholder=" " id="other">
+                        <label class="form_label">Другая сумма, Р</label>
+                    </div>
+
+                    <div class="form_group">
+                        <input class="data_input" placeholder=" " id="email">
+                        <label class="data_label">Введите email</label>         
+                    </div>
+                    
+                    <div class="form_group">
+                        <input class="data_input" placeholder=" " id="name">
+                        <label class="data_label">Введите имя и фамилию</label>
+                    </div>
+                    
+                    <div class="form_group">
+                        <input class="data_input" placeholder=" ">
+                        <label class="data_label">Введите комментарий (при необходимости)</label>
+                    </div>
+
+                    <div class="checkb">
+                        <input type="checkbox" id="agreeOferta" name="agreeOferta" />
+                        <label for="agreeOferta">Соглашаюсь с офертой</label>
+                    </div>
+
+                    <div class="checkb">
+                        <input type="checkbox" id="agreePersonalData" name="agreePersonalData"/>
+                        <label for="agreePersonalData">Соглашаюсь с обработкой персональных данных</label>
+                    </div>
+
+                    <input type='submit' value='Пожертвовать' class="submit-btn">
+                </form>
+            </div>
+        </div>
+
+        <script defer src = "script.js"></script>
+
+    </body>
+</html>
